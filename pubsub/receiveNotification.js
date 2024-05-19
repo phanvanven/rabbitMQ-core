@@ -16,7 +16,7 @@ const receiveNotification = async()=>{
         const {
             queue // queue name
         } = await channel.assertQueue('',{
-            exclusive: true
+            exclusive: true // queues will auto-delete when consumer disconnects
         });
         console.log(`queueName: ${queue}`);
         // 5. binding - A relationship between exchange and queue is called binding.
